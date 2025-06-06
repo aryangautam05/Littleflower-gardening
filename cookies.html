@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookie Policy - Littleflower Gardening</title>
+<style>
+  /* Import Google Fonts - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    /* Flower-themed pastel colors */
+    --color-pink-light: #ffc1cc;
+    --color-pink-medium: #ff6f91;
+    --color-pink-dark: #b33951;
+    --color-green-light: #daf7dc;
+    --color-green-medium: #6fcf97;
+    --color-green-dark: #2d6a4f;
+    --color-purple-light: #d6bcfa;
+    --color-purple-medium: #7b2ff7;
+    --color-purple-dark: #4b0082;
+    --color-gray-dark: #3b3b3b;
+    --color-gray-medium: #666666;
+    --color-gray-light: #f9f6f7;
+    --shadow-light: rgba(255, 111, 145, 0.2);
+    --shadow-dark: rgba(0,0,0,0.1);
+  }
+
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  a {
+    color: var(--color-pink-medium);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: var(--color-pink-dark);
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Header and Nav */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-pink-dark);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-gray-medium);
+  }
+  .nav-links a {
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: var(--color-pink-light);
+    color: var(--color-pink-dark);
+  }
+  .nav-links a.active {
+    background: var(--color-pink-medium);
+    color: white;
+    cursor: default;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-green-light) 100%);
+    padding: 5rem 1rem 2rem;
+    border-radius: 0 0 60px 60px / 60px 60px 0 0;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    text-align: center;
+    color: var(--color-purple-dark);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    text-shadow: 1px 1px 5px var(--color-pink-dark);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-weight: 600;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 3rem 1rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--color-purple-dark);
+    border-bottom: 3px solid var(--color-pink-medium);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-green-dark);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    padding-left: 1.3rem;
+    list-style: disc;
+  }
+  ol {
+    padding-left: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Bottom section */
+  .bottom-section {
+    background: var(--color-pink-light);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    color: var(--color-pink-dark);
+  }
+  .bottom-section h3 {
+    color: var(--color-pink-dark);
+    margin-bottom: 1rem;
+  }
+  .bottom-section p {
+    font-weight: 500;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-purple-dark);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  footer p, footer a {
+    margin: 0.2rem 0;
+    color: #f0e6ff;
+  }
+  footer a:hover {
+    color: var(--color-pink-light);
+  }
+
+  /* Cookie consent dialog styles */
+  #cookie-consent {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-purple-light);
+    color: var(--color-purple-dark);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    padding: 1rem 1.5rem;
+    max-width: 480px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    z-index: 1500;
+  }
+  #cookie-consent p {
+    flex-grow: 1;
+    margin-right: 1rem;
+  }
+  #cookie-consent button {
+    background: var(--color-pink-medium);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    user-select: none;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background: var(--color-pink-dark);
+    outline: none;
+    transform: scale(1.05);
+  }
+  #cookie-consent button.decline {
+    background: var(--color-gray-medium);
+  }
+  #cookie-consent button.decline:hover,
+  #cookie-consent button.decline:focus {
+    background: var(--color-gray-dark);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    main {
+      padding: 2rem 1rem 4rem;
+    }
+    #cookie-consent {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+    }
+    #cookie-consent button {
+      width: 100%;
+      padding: 0.6rem 0;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="Littleflower Gardening logo">Littleflower Garden</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy Policy</a>
+      <a href="terms.html" tabindex="0">Terms of Service</a>
+      <a href="cookies.html" class="active" tabindex="0" aria-current="page">Cookie Policy</a>
+       <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Cookie Policy Page Hero">
+  <h1>Cookie Policy</h1>
+  <p>Learn how Littleflower Gardening uses cookies and similar technologies to enhance your experience.</p>
+</section>
+
+<main>
+  <article>
+    <section aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <p>Cookies are tiny data files placed on your device when you visit a website. They help websites remember your preferences, improve user experience, and analyze traffic. At Littleflower Gardening, we use cookies thoughtfully to nurture your browsing journey while respecting your privacy.</p>
+      <p>This Cookie Policy explains what cookies are, how and why we use them, the types of cookies on our site, and your choices regarding cookies.</p>
+    </section>
+
+    <section aria-labelledby="what-are-cookies-title">
+      <h2 id="what-are-cookies-title">What Are Cookies?</h2>
+      <p>Cookies are small text files stored on your device by your web browser. They hold information like website preferences, login status, or tracking identifiers. Cookies allow websites to recognize your device during and between visits, enabling functionality such as personalized content and remembering login credentials.</p>
+      <p>There are two types of cookies:</p>
+      <ul>
+        <li><strong>Session Cookies:</strong> Temporary cookies that expire once you close your browser. They help the website track your journey within a session.</li>
+        <li><strong>Persistent Cookies:</strong> Cookies that stay on your device for a set period or until you delete them, helping remember preferences across visits.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="how-we-use-cookies-title">
+      <h2 id="how-we-use-cookies-title">How We Use Cookies</h2>
+      <p>Littleflower Gardening uses cookies to provide you with a meaningful, seamless website experience. Here are some examples:</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> These are necessary for basic website functions, such as navigation and security."</li>
+        <li><strong>Preferences Cookies:</strong> These cookies remember your language settings, font size preferences, and other customizable features to tailor the experience.</li>
+        <li><strong>Performance Cookies:</strong> We use cookies to collect information about how visitors use our site. This helps us optimize performance and understand which pages are most popular.</li>
+        <li><strong>Marketing Cookies:</strong> Third-party cookies help deliver relevant advertisements based on your browsing history and preferences. These cookies also measure ad campaign effectiveness.</li>
+      </ul>
+      <p>Cookies allow us to bloom the best version of our website just for you, keeping your journey personal and flowing smoothly.</p>
+    </section>
+
+    <section aria-labelledby="third-party-cookies-title">
+      <h2 id="third-party-cookies-title">Third-Party Cookies</h2>
+      <p>Some cookies on our site are set by third parties we trust, such as analytics providers and advertising partners. Examples include:</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> for understanding user interactions and improving site performance.</li>
+        <li><strong>Advertising Networks:</strong> displaying personalized ads based on your interests.</li>
+      </ul>
+      <p>These third parties have their own privacy and cookie policies. We recommend reviewing those policies if you want detailed information on how they use cookies and how you can manage them.</p>
+    </section>
+
+    <section aria-labelledby="your-cookie-choices-title">
+      <h2 id="your-cookie-choices-title">Your Cookie Choices</h2>
+      <p>You can decide whether to accept or decline cookies. Most browsers automatically accept cookies, but you can usually modify your browser settings to decline cookies if you prefer.</p>
+      <p>Please be aware that disabling cookies may affect your ability to use certain parts of our website or services effectively, like a garden deprived of essential water and sunlight.</p>
+      <p>Here are some ways you can manage cookies:</p>
+      <ul>
+        <li><strong>Browser Settings:</strong> You can configure your browser to reject or delete cookies. Check your browser’s help documentation for instructions.</li>
+        <li><strong>Opt-Out Tools:</strong> Some advertising networks provide tools to opt-out of targeted advertising cookies.</li>
+        <li><strong>Cookie Consent Banner:</strong> Use the options in the cookie consent dialog below to accept or decline cookies during your visit.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="how-to-delete-cookies-title">
+      <h2 id="how-to-delete-cookies-title">How to Delete Cookies</h2>
+      <p>If you want to clear cookies from your device, most browsers allow you to remove stored cookies:</p>
+      <ul>
+        <li><strong>Google Chrome:</strong> Go to Settings &gt; Privacy and security &gt; Clear browsing data; then select Cookies and other site data.</li>
+        <li><strong>Mozilla Firefox:</strong> Options &gt; Privacy &gt; Cookies and Site Data &gt; Clear Data.</li>
+        <li><strong>Microsoft Edge:</strong> Settings &gt; Privacy, search, and services &gt; Clear browsing data.</li>
+        <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Manage Website Data &gt; Remove All.</li>
+      </ul>
+      <p>Note that deleting cookies may log you out from websites and reset your preferences.</p>
+    </section>
+
+    <section aria-labelledby="updates-to-cookie-policy-title">
+      <h2 id="updates-to-cookie-policy-title">Updates to This Cookie Policy</h2>
+      <p>We may update this Cookie Policy occasionally to reflect changes in our cookie practices or applicable laws. We recommend checking this page periodically for updates to stay informed about how we use cookies to nurture your experience.</p>
+      <p>Significant changes will be communicated via notices on our website or other appropriate channels.</p>
+    </section>
+
+    <section aria-labelledby="contact-us-title">
+      <h2 id="contact-us-title">Contact Us</h2>
+      <p>If you have questions or concerns about our use of cookies or this Cookie Policy, please contact us using the information below. We are here to help your experience blossom.</p>
+      <ul>
+        <li><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</li>
+        <li><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></li>
+        <li><strong>Email:</strong> <a href="mailto:cookies@littleflowergardening.com">cookies@littleflowergardening.com</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer role="contentinfo" aria-label="Footer with contact information">
+  <p><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</p>
+  <p><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></p>
+  <p>© 2024 Littleflower Gardening. All rights reserved.</p>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent dialog" aria-modal="true" hidden>
+  <p>We use cookies to personalize content, analyze traffic, and improve your experience on our site. By continuing, you agree to our use of cookies.</p>
+  <button id="acceptCookies" aria-label="Accept cookies">Accept</button>
+  <button id="declineCookies" class="decline" aria-label="Decline cookies">Decline</button>
+</div>
+
+<script>
+  (function() {
+    const consentBox = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    function setCookieConsent(consent) {
+      localStorage.setItem('cookieConsent', consent);
+      consentBox.hidden = true;
+    }
+
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('cookieConsent');
+      if(consent === 'accepted' || consent === 'declined') {
+        consentBox.hidden = true;
+      } else {
+        consentBox.hidden = false;
+      }
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      setCookieConsent('accepted');
+    });
+
+    declineBtn.addEventListener('click', () => {
+      setCookieConsent('declined');
+    });
+
+    checkCookieConsent();
+  })();
+</script>
+</body>
+</html>
