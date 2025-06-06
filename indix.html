@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Littleflower Gardening Services</title>
+<style>
+  /* Import Google Fonts - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    /* Flower-themed pastel colors */
+    --color-pink-light: #ffc1cc;
+    --color-pink-medium: #ff6f91;
+    --color-pink-dark: #b33951;
+    --color-green-light: #daf7dc;
+    --color-green-medium: #6fcf97;
+    --color-green-dark: #2d6a4f;
+    --color-purple-light: #d6bcfa;
+    --color-purple-medium: #7b2ff7;
+    --color-purple-dark: #4b0082;
+    --color-gray-dark: #3b3b3b;
+    --color-gray-medium: #666666;
+    --color-gray-light: #f9f6f7;
+    --shadow-light: rgba(255, 111, 145, 0.2);
+    --shadow-dark: rgba(0,0,0,0.1);
+  }
+
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: var(--color-pink-medium);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-pink-dark);
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Header and Nav */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-pink-dark);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-gray-medium);
+  }
+  .nav-links a {
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover {
+    background: var(--color-pink-light);
+    color: var(--color-pink-dark);
+  }
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-green-light) 100%);
+    padding: 6rem 1rem 4rem;
+    border-radius: 0 0 60px 60px / 60px 60px 0 0;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    text-align: center;
+    color: var(--color-purple-dark);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px var(--color-pink-dark);
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-weight: 600;
+  }
+  .btn-primary {
+    background: var(--color-pink-medium);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px var(--shadow-light);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    user-select: none;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: var(--color-pink-dark);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 3rem 1rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  /* Section titles */
+  h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--color-purple-dark);
+    border-bottom: 3px solid var(--color-pink-medium);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-green-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Paragraph text */
+  p {
+    font-size: 1rem;
+    max-width: 900px;
+    margin-bottom: 1rem;
+    color: var(--color-gray-dark);
+  }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px var(--shadow-dark);
+    padding: 1.5rem 2rem 2rem;
+    transition: box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card:hover {
+    box-shadow: 0 12px 30px var(--shadow-light);
+  }
+  .service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px var(--shadow-light);
+  }
+  .service-card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--color-pink-dark);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .service-card p {
+    flex-grow: 1;
+    color: var(--color-gray-dark);
+  }
+  .service-price {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-green-dark);
+  }
+
+  /* Advantages/Reasons section also uses grid */
+  .reasons-list {
+    display: grid;
+    gap: 1rem 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+  }
+  .reason-item {
+    background: var(--color-green-light);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 6px 12px var(--shadow-light);
+    color: var(--color-green-dark);
+    font-weight: 600;
+    border-left: 6px solid var(--color-pink-medium);
+  }
+
+  /* Disclaimer and Satisfaction sections */
+  .bottom-section {
+    background: var(--color-pink-light);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    color: var(--color-pink-dark);
+  }
+  .bottom-section h3 {
+    color: var(--color-pink-dark);
+    margin-bottom: 1rem;
+  }
+  .bottom-section p {
+    font-weight: 500;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-purple-dark);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  footer p, footer a {
+    margin: 0.2rem 0;
+    color: #f0e6ff;
+  }
+  footer a:hover {
+    color: var(--color-pink-light);
+  }
+
+  /* Responsive typography adjustments */
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="Littleflower Gardening logo">Littleflower Garden</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy Policy</a>
+      <a href="terms.html" tabindex="0">Terms & Conditions</a>
+      <a href="cookies.html" tabindex="0">Cookies policy</a>
+      <a href="contact.html" tabindex="0">Contact us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Hero section introducing Littleflower Gardening">
+  <h1>Bloom Your Garden with Love & Care</h1>
+  <p>Your trusted partner for vibrant, thriving gardens & flower beds.</p>
+  <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to services section">Explore Our Services</button>
+</section>
+
+<main>
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About Littleflower Gardening</h2>
+    <p>
+      At Littleflower Gardening, we bring nature’s beauty closer to you. With over a decade of experience, our passion lies in helping your outdoor spaces bloom into stunning sanctuaries of tranquility and color. We specialize in personalized gardening services designed to suit your unique environment and preferences.
+    </p>
+    <p>
+      Our team of expert horticulturists understands the diverse needs of flowers, shrubs, and greenery, blending science with art. Whether you desire a serene flower garden, a verdant backyard, or seasonal floral arrangements, Littleflower Gardening ensures quality, reliability, and unmatched customer satisfaction.
+    </p>
+    <p>
+      Gardening is more than a task; it’s a celebration of growth, patience, and beauty. With environmentally friendly practices and sustainable techniques, we strive to cultivate lasting beauty with minimal impact on nature.
+    </p>
+  </section>
+
+  <section id="services" aria-labelledby="services-title">
+    <h2 id="services-title">Our Services</h2>
+    <p>
+      From garden setup to ongoing maintenance, discover how Littleflower Gardening can transform your outdoor spaces with care and creativity:
+    </p>
+
+    <div class="services-grid">
+      <article class="service-card" tabindex="0" aria-label="Garden Design service">
+        <img src="s1.jpg" alt="Flower garden designed with vibrant colors" />
+        <h4>Garden Design & Planning</h4>
+        <p>Expert garden layout and floral design tailored to your space, blend of colors, and seasonal preferences. We create harmonious and sustainable green spaces that delight year-round.</p>
+        <div class="service-price">Starting at $500</div>
+      </article>
+
+      <article class="service-card" tabindex="0" aria-label="Planting and Installation service">
+        <img src="s2.jpg" alt="Gardener planting young plants" />
+        <h4>Planting & Installation</h4>
+        <p>Quality plant selection and expert installation to guarantee healthy growth. We source native and exotic plants and ensure they thrive in your garden conditions.</p>
+        <div class="service-price">Starting at $300</div>
+      </article>
+
+      <article class="service-card" tabindex="0" aria-label="Garden Maintenance service">
+        <img src="s3.jpg" alt="Hands trimming a flowering bush in garden maintenance" />
+        <h4>Garden Maintenance</h4>
+        <p>Regular care including pruning, watering, fertilizing, pest control, and seasonal cleanup to keep your garden blooming and healthy through every season.</p>
+        <div class="service-price">Packages from $150/month</div>
+      </article>
+
+      <article class="service-card" tabindex="0" aria-label="Seasonal Flower Arrangements service">
+        <img src="s4.jpg" alt="Seasonal flower arrangements in vases" />
+        <h4>Seasonal Flower Arrangements</h4>
+        <p>Custom bouquets and floral designs for your home, events, or gifts. We use fresh seasonal flowers carefully combined for aesthetic pleasure and lasting freshness.</p>
+        <div class="service-price">Starting at $80</div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-us-title" style="margin-top:4rem;">
+    <h2 id="why-us-title">Why Choose Littleflower Gardening?</h2>
+    <div class="reasons-list" role="list">
+      <div class="reason-item" role="listitem">Experienced and passionate horticulturists</div>
+      <div class="reason-item" role="listitem">Sustainable, eco-friendly gardening techniques</div>
+      <div class="reason-item" role="listitem">Personalized garden plans and flexible schedules</div>
+      <div class="reason-item" role="listitem">Quality plants selected for your region</div>
+      <div class="reason-item" role="listitem">Reliable maintenance packages</div>
+      <div class="reason-item" role="listitem">Outstanding customer satisfaction record</div>
+    </div>
+    <p style="margin-top:1.5rem; max-width: 900px;">
+      At Littleflower Gardening, your garden's health and your satisfaction are our highest priorities. We take pride in transforming your outdoor space into a lush haven that's both beautiful and environmentally sustainable.
+    </p>
+  </section>
+
+  <section aria-labelledby="garden-tips-title" style="margin-top:4rem;">
+    <h2 id="garden-tips-title">Gardening Tips & Care Advice</h2>
+    <p>
+      Keeping a vibrant garden requires knowledge and attention. Here are some expert tips from Littleflower Gardening’s team to help you nurture your plants and flowers:
+    </p>
+    <ul>
+      <li><strong>Soil quality:</strong> Test and amend your soil regularly to ensure optimal nutrient content and proper pH for your plant types.</li>
+      <li><strong>Watering:</strong> Water deeply but infrequently to encourage deep root growth. Early morning or evening watering helps reduce evaporation.</li>
+      <li><strong>Pruning:</strong> Remove dead or diseased branches to promote healthy growth and flowering.</li>
+      <li><strong>Pest control:</strong> Use natural pest deterrents and avoid harsh chemicals that can harm beneficial insects.</li>
+      <li><strong>Seasonal planting:</strong> Match your planting schedule to native seasons for best results, and rotate plants to prevent soil depletion.</li>
+      <li><strong>Mulching:</strong> Apply mulch to conserve moisture, reduce weeds, and regulate soil temperature.</li>
+      <li><strong>Fertilizing:</strong> Choose organic fertilizers suited to your plants’ requirements and apply in recommended amounts.</li>
+    </ul>
+    <p>
+      Our team is also available for personalized consultations to help you optimize your garden’s health and beauty all year round.
+    </p>
+  </section>
+
+  <section class="bottom-section" aria-label="Customer satisfaction statement">
+    <h3>Customer Satisfaction</h3>
+    <p>
+      We are proud to have a strong history of satisfied clients who trust Littleflower Gardening for their garden needs. Your happiness is our success, and we strive to exceed your expectations with every bloom.
+    </p>
+  </section>
+
+  <section class="bottom-section" aria-label="Disclaimer">
+    <h3>Disclaimer</h3>
+    <p>
+      Littleflower Gardening Services provide expert gardening and landscaping assistance using environmentally conscious methods. However, gardening outcomes can be influenced by many factors including weather conditions, soil characteristics, and plant varieties. We cannot guarantee specific results, and customers are encouraged to maintain regular care routines according to our advice.
+    </p>
+  </section>
+</main>
+
+<footer role="contentinfo" aria-label="Footer with contact information">
+  <p><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</p>
+  <p><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></p>
+  <p>© 2024 Littleflower Gardening. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
