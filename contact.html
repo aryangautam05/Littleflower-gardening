@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Littleflower Gardening</title>
+<style>
+  /* Import Google Fonts - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    /* Flower-themed pastel colors */
+    --color-pink-light: #ffc1cc;
+    --color-pink-medium: #ff6f91;
+    --color-pink-dark: #b33951;
+    --color-green-light: #daf7dc;
+    --color-green-medium: #6fcf97;
+    --color-green-dark: #2d6a4f;
+    --color-purple-light: #d6bcfa;
+    --color-purple-medium: #7b2ff7;
+    --color-purple-dark: #4b0082;
+    --color-gray-dark: #3b3b3b;
+    --color-gray-medium: #666666;
+    --color-gray-light: #f9f6f7;
+    --shadow-light: rgba(255, 111, 145, 0.2);
+    --shadow-dark: rgba(0,0,0,0.1);
+  }
+
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  a {
+    color: var(--color-pink-medium);
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: var(--color-pink-dark);
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Header and Nav */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-pink-dark);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-gray-medium);
+  }
+  .nav-links a {
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: var(--color-pink-light);
+    color: var(--color-pink-dark);
+  }
+  .nav-links a.active {
+    background: var(--color-pink-medium);
+    color: white;
+    cursor: default;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-green-light) 100%);
+    padding: 5rem 1rem 2rem;
+    border-radius: 0 0 60px 60px / 60px 60px 0 0;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    text-align: center;
+    color: var(--color-purple-dark);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    text-shadow: 1px 1px 5px var(--color-pink-dark);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    font-weight: 600;
+  }
+
+  /* Main content */
+  main {
+    padding: 3rem 1rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-purple-dark);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--color-pink-medium);
+    padding-bottom: 0.3rem;
+    display: inline-block;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-green-dark);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p, li {
+    font-size: 1.05rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.25rem;
+  }
+
+  ul {
+    padding-left: 1.3rem;
+    list-style: disc;
+  }
+
+  /* Form styles */
+  form {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    max-width: 600px;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-pink-dark);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-pink-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-gray-dark);
+    transition: border-color 0.3s ease;
+    resize: vertical;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-pink-medium);
+    box-shadow: 0 0 6px var(--color-pink-light);
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  button[type="submit"] {
+    background: var(--color-pink-medium);
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px var(--shadow-light);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1.5rem;
+    user-select: none;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: var(--color-pink-dark);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Contact info block */
+  .contact-info {
+    background: var(--color-pink-light);
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    max-width: 600px;
+    margin: 3rem auto 0;
+    color: var(--color-pink-dark);
+    line-height: 1.75;
+    font-weight: 500;
+  }
+  .contact-info h3 {
+    margin-bottom: 1rem;
+  }
+  .contact-info p {
+    margin-bottom: 0.9rem;
+  }
+  .contact-info address {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+  }
+  .contact-info a {
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-purple-dark);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  footer p, footer a {
+    margin: 0.2rem 0;
+    color: #f0e6ff;
+  }
+  footer a:hover {
+    color: var(--color-pink-light);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    form, .contact-info {
+      width: 100%;
+      padding: 1.5rem 1.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="Littleflower Gardening logo">Littleflower Garden</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy Policy</a>
+      <a href="terms.html" tabindex="0">Terms of Service</a>
+      <a href="cookies.html" tabindex="0">Cookie Policy</a>
+      <a href="contact.html" class="active" tabindex="0" aria-current="page">Contact Us</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Contact Us Page Hero">
+  <h1>Contact Littleflower Gardening</h1>
+  <p>We love hearing from you! Whether you have questions, feedback, or need personalized gardening advice, we are here to help.</p>
+</section>
+
+<main>
+  <article>
+    <section aria-labelledby="contact-intro-title">
+      <h2 id="contact-intro-title">Connecting with Littleflower Gardening</h2>
+      <p>At Littleflower Gardening, we believe communication is the root of great relationships. Reaching out to us is as straightforward as watering your garden—quick, nurturing, and rewarding.</p>
+      <p>This page will guide you on how to contact us, what to expect when you do, and tips for making your inquiry blossom into a perfect response.</p>
+    </section>
+
+    <section aria-labelledby="ways-to-contact-title">
+      <h2 id="ways-to-contact-title">Ways to Contact Us</h2>
+      <p>Your convenience matters. We provide multiple channels to get in touch based on your preferences and needs:</p>
+      <ul>
+        <li><strong>Contact Form:</strong> Fill out the form below for inquiries, service requests, or general feedback. This is the fastest way to reach our team.</li>
+        <li><strong>Phone:</strong> Call us directly for urgent or detailed discussions. Our garden experts are available during business hours.</li>
+        <li><strong>Email:</strong> Send us an email to privacy@littleflowergardening.com or support@littleflowergardening.com for specific inquiries.</li>
+        <li><strong>Physical Visit:</strong> Visit us at our garden center located at 1 E 2nd St, New York, NY 10003, USA. Prior appointment is recommended.</li>
+      </ul>
+      <p>We strive to respond promptly to all inquiries and ensure your questions are answered thoroughly.</p>
+    </section>
+
+    <section aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Contact Form</h2>
+      <p>Please use the form below to send us a message. Include as much detail as possible to help us assist you efficiently.</p>
+      <form action="#" method="POST" novalidate aria-label="Contact form">
+        <label for="fullName">Full Name <span aria-hidden="true" style="color:#b33951;">*</span></label>
+        <input type="text" id="fullName" name="fullName" required placeholder="Your name" aria-required="true" autocomplete="name" />
+
+        <label for="email">Email Address <span aria-hidden="true" style="color:#b33951;">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" aria-required="true" autocomplete="email" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 212 555 0123" autocomplete="tel" />
+
+        <label for="message">Message <span aria-hidden="true" style="color:#b33951;">*</span></label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..." aria-required="true"></textarea>
+
+        <button type="submit" aria-label="Submit contact form">Send Message</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="responsiveness-title">
+      <h2 id="responsiveness-title">What to Expect When You Contact Us</h2>
+      <p>Once you reach out, we will:</p>
+      <ul>
+        <li><strong>Acknowledge Your Inquiry:</strong> You will receive an automatic confirmation that we have received your message.</li>
+        <li><strong>Careful Review:</strong> Our team evaluates your request thoroughly, consulting experts if needed, to provide the most accurate and helpful response.</li>
+        <li><strong>Prompt Reply:</strong> We generally aim to respond within 24-48 hours during business days. Complex questions might require a bit more time but we keep you informed.</li>
+        <li><strong>Follow-Up:</strong> We may contact you for additional information or clarification to ensure your needs are met completely.</li>
+      </ul>
+      <p>Your satisfaction is our blossoming goal, and we are eager to assist you on your gardening journey.</p>
+    </section>
+
+    <section aria-labelledby="frequently-asked-questions-title">
+      <h2 id="frequently-asked-questions-title">Frequently Asked Questions About Contacting Us</h2>
+      <h3>How quickly will I get a response?</h3>
+      <p>We strive to reply within 24-48 hours during business hours (Monday to Friday, 9 AM to 6 PM ET). Responses might take longer on weekends or holidays.</p>
+      <h3>Can I visit your garden center without an appointment?</h3>
+      <p>For personalized consultations or to discuss a project, we recommend making an appointment. Walk-ins are welcome during open hours but may be subject to availability.</p>
+      <h3>Is my personal information safe when I contact you?</h3>
+      <p>Absolutely. We treat all contact information with strict confidentiality and only use it to respond to your inquiry or improve our services. Please see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+      <h3>What if my question is urgent?</h3>
+      <p>If you have an urgent matter, please call us at <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a> for immediate assistance during business hours.</p>
+      <h3>Can I request a service quote through the contact form?</h3>
+      <p>Yes! Include your project details in the message field, and our team will get back to you with information and next steps.</p>
+    </section>
+
+    <section aria-labelledby="tips-for-effective-contact-title">
+      <h2 id="tips-for-effective-contact-title">Tips for Effective Communication</h2>
+      <p>To help us assist you better and faster, consider these tips when contacting us:</p>
+      <ul>
+        <li>Provide clear, concise details about your needs or questions.</li>
+        <li>Include your preferred contact method and available times.</li>
+        <li>Attach any relevant photos or documents if applicable.</li>
+        <li>Be patient as we carefully review and respond thoughtfully.</li>
+      </ul>
+      <p>Our goal is to make your interaction as pleasant and fruitful as a garden in pleno bloom.</p>
+    </section>
+
+    <section class="bottom-section" aria-label="Closing statement">
+      <h3>We’re Here to Help Your Garden Grow</h3>
+      <p>Thank you for considering Littleflower Gardening for your gardening needs. Your communication is the seed that helps us nurture and build a beautiful relationship. We look forward to helping your outdoor spaces flourish.</p>
+    </section>
+  </article>
+</main>
+
+<footer role="contentinfo" aria-label="Footer with contact information">
+  <p><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</p>
+  <p><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></p>
+  <p>© 2024 Littleflower Gardening. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
