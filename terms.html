@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service - Littleflower Gardening</title>
+<style>
+  /* Import Google Fonts - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    /* Flower-themed pastel colors */
+    --color-pink-light: #ffc1cc;
+    --color-pink-medium: #ff6f91;
+    --color-pink-dark: #b33951;
+    --color-green-light: #daf7dc;
+    --color-green-medium: #6fcf97;
+    --color-green-dark: #2d6a4f;
+    --color-purple-light: #d6bcfa;
+    --color-purple-medium: #7b2ff7;
+    --color-purple-dark: #4b0082;
+    --color-gray-dark: #3b3b3b;
+    --color-gray-medium: #666666;
+    --color-gray-light: #f9f6f7;
+    --shadow-light: rgba(255, 111, 145, 0.2);
+    --shadow-dark: rgba(0,0,0,0.1);
+  }
+
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    line-height: 1.75;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  a {
+    color: var(--color-pink-medium);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: var(--color-pink-dark);
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Header and Nav */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-pink-dark);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-gray-medium);
+  }
+  .nav-links a {
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: var(--color-pink-light);
+    color: var(--color-pink-dark);
+  }
+  .nav-links a.active {
+    background: var(--color-pink-medium);
+    color: white;
+    cursor: default;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-green-light) 100%);
+    padding: 5rem 1rem 2rem;
+    border-radius: 0 0 60px 60px / 60px 60px 0 0;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    text-align: center;
+    color: var(--color-purple-dark);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    text-shadow: 1px 1px 5px var(--color-pink-dark);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-weight: 600;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 3rem 1rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--color-purple-dark);
+    border-bottom: 3px solid var(--color-pink-medium);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-green-dark);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    padding-left: 1.3rem;
+    list-style: disc;
+  }
+  ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Bottom section */
+  .bottom-section {
+    background: var(--color-pink-light);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    color: var(--color-pink-dark);
+  }
+  .bottom-section h3 {
+    color: var(--color-pink-dark);
+    margin-bottom: 1rem;
+  }
+  .bottom-section p {
+    font-weight: 500;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-purple-dark);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  footer p, footer a {
+    margin: 0.2rem 0;
+    color: #f0e6ff;
+  }
+  footer a:hover {
+    color: var(--color-pink-light);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    main {
+      padding: 2rem 1rem 4rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="Littleflower Gardening logo">Littleflower Garden</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" tabindex="0">Privacy Policy</a>
+      <a href="terms.html" class="active" tabindex="0" aria-current="page">Terms of Service</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Terms of Service Page Hero">
+  <h1>Terms of Service</h1>
+  <p>Welcome to Littleflower Gardening. Please read our Terms of Service carefully as they govern your use of our website and services.</p>
+</section>
+
+<main>
+  <article>
+    <section aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <p>These Terms of Service ("Terms") govern your access to and use of Littleflower Gardening's website, products, and services ("Services"). By accessing or using our Services, you confirm that you agree to be bound by these Terms. If you do not agree, please do not use our Services.</p>
+      <p>We encourage you to read these Terms carefully as they set forth important information about your rights and obligations as a user of our Services.</p>
+    </section>
+
+    <section aria-labelledby="use-of-services-title">
+      <h2 id="use-of-services-title">Use of Services</h2>
+      <p>Littleflower Gardening provides a range of gardening services including design, planting, maintenance, and floral arrangements, as described on our website. By using our Services, you agree to:</p>
+      <ul>
+        <li>Use our Services only for lawful purposes and not for any illegal, fraudulent, or unauthorized activities;</li>
+        <li>Provide accurate, current, and complete information as required during service inquiries or purchases;</li>
+        <li>Maintain security and confidentiality of any account credentials or payment methods;</li>
+        <li>Comply with any additional policies or guidelines posted by Littleflower Gardening related to the Services.</li>
+      </ul>
+      <p>We reserve the right to suspend or terminate access to our Services if we suspect violations of these terms or illegal activity.</p>
+    </section>
+
+    <section aria-labelledby="service-offerings-title">
+      <h2 id="service-offerings-title">Service Offerings & Pricing</h2>
+      <p>Descriptions, availability, and pricing of our gardening services are presented as accurately as possible on our website and related materials. Prices are subject to change without notice and may vary based on location and service scope. All estimates for services are provided in good faith but may require confirmation and adjustments upon detailed assessment.</p>
+      <p>We reserve the right to modify or discontinue any service offerings at any time without liability.</p>
+      <p>By requesting or purchasing our Services, you acknowledge that pricing and service terms will be confirmed in writing as part of a formal agreement or invoice.</p>
+    </section>
+
+    <section aria-labelledby="intellectual-property-title">
+      <h2 id="intellectual-property-title">Intellectual Property</h2>
+      <p>All content on Littleflower Gardening’s website, including text, graphics, logos, images, videos, and software, is the property of Littleflower Gardening or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+      <p>You agree not to reproduce, distribute, create derivative works, publicly display, or otherwise use any content from our site for commercial purposes without explicit written permission from Littleflower Gardening.</p>
+      <p>Trademarks, service marks, and logos used throughout our Services are registered and unregistered trademarks of Littleflower Gardening and its affiliates. Unauthorized use of these marks is prohibited.</p>
+    </section>
+
+    <section aria-labelledby="user-content-title">
+      <h2 id="user-content-title">User Content & Conduct</h2>
+      <p>When you provide feedback, reviews, or any user-generated content through our Services, you grant Littleflower Gardening a non-exclusive, worldwide, royalty-free, perpetual license to use, reproduce, modify, publish, translate, distribute, and display such content in connection with our services.</p>
+      <p>You agree not to submit content that is:</p>
+      <ul>
+        <li>Unlawful, defamatory, offensive, or harmful;</li>
+        <li>Infringing upon intellectual property rights or privacy rights of others;</li>
+        <li>Spam, advertising, or promotional content without authorization;</li>
+        <li>Contains viruses, malware, or harmful computer code.</li>
+      </ul>
+      <p>Littleflower Gardening reserves the right to remove any content violating these guidelines without prior notice.</p>
+    </section>
+
+    <section aria-labelledby="payment-terms-title">
+      <h2 id="payment-terms-title">Payment Terms</h2>
+      <p>Payments for services are due as specified in invoices or service agreements. Accepted payment methods will be communicated during ordering.</p>
+      <p>Late payments may incur additional fees or interest, and failure to pay timely may result in suspension or termination of Services.</p>
+      <p>We do not store your payment data directly; all payment processing is securely handled via trusted third-party payment providers.</p>
+    </section>
+
+    <section aria-labelledby="disclaimers-title">
+      <h2 id="disclaimers-title">Disclaimers</h2>
+      <p>Littleflower Gardening strives to provide high-quality gardening services and accurate information, but makes no warranties or guarantees, express or implied, regarding the results or effectiveness of any services. Gardening outcomes depend on many factors, including environmental and climatic conditions beyond our control.</p>
+      <p>Our website and services are provided "as is" and "as available" without warranties of any kind, including merchantability or fitness for a particular purpose.</p>
+    </section>
+
+    <section aria-labelledby="limitation-liability-title">
+      <h2 id="limitation-liability-title">Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Littleflower Gardening will not be liable for any indirect, incidental, special, consequential, or punitive damages, or loss of profits or revenues, arising out of or related to your use of our Services.</p>
+      <p>Our total collective liability for any claim related to the Services will not exceed the amount you paid us for the specific service at issue.</p>
+      <p>This limitation applies regardless of the form of action, whether in contract, tort, or otherwise.</p>
+    </section>
+
+    <section aria-labelledby="indemnification-title">
+      <h2 id="indemnification-title">Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Littleflower Gardening and its affiliates, officers, directors, employees, and agents from any claims, damages, obligations, losses, liabilities, costs, or debt arising from:</p>
+      <ul>
+        <li>Your violation of these Terms;</li>
+        <li>Your misuse of the Services;</li>
+        <li>Your infringement upon the rights of any third party.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="termination-title">
+      <h2 id="termination-title">Termination</h2>
+      <p>We reserve the right to suspend or terminate your access to our Services at any time, with or without cause or notice, including for violation of these Terms.</p>
+      <p>Upon termination, your rights to use the Services will immediately cease, and any outstanding obligations will remain in effect.</p>
+    </section>
+
+    <section aria-labelledby="governing-law-title">
+      <h2 id="governing-law-title">Governing Law and Jurisdiction</h2>
+      <p>These Terms shall be governed by and construed according to the laws of the State of New York, United States, without regard to conflict of law principles.</p>
+      <p>You agree to submit to the exclusive jurisdiction of state and federal courts located in New York County for any disputes arising out of or relating to these Terms or your use of the Services.</p>
+    </section>
+
+    <section aria-labelledby="changes-to-terms-title">
+      <h2 id="changes-to-terms-title">Changes to These Terms</h2>
+      <p>We may update or modify these Terms at any time to reflect changes in our operations, legal requirements, or business priorities.</p>
+      <p>When we make significant changes, we will notify you by posting a notice on our website or sending an email if you have provided contact information.</p>
+      <p>Your continued use of our Services following such changes constitutes your acceptance of the updated Terms.</p>
+    </section>
+
+    <section aria-labelledby="entire-agreement-title">
+      <h2 id="entire-agreement-title">Entire Agreement</h2>
+      <p>These Terms, along with our Privacy Policy and any other legal notices published by Littleflower Gardening, constitute the entire agreement between you and us regarding your use of the Services, superseding any prior agreements.</p>
+    </section>
+
+    <section aria-labelledby="contact-us-title">
+      <h2 id="contact-us-title">Contact Us</h2>
+      <p>If you have any questions or concerns about these Terms of Service, please reach out to us. We are committed to keeping your experience with Littleflower Gardening as flourishing and transparent as our gardens.</p>
+      <ul>
+        <li><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</li>
+        <li><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></li>
+        <li><strong>Email:</strong> <a href="mailto:support@littleflowergardening.com">support@littleflowergardening.com</a></li>
+      </ul>
+    </section>
+
+    <section class="bottom-section" aria-label="Acknowledgment">
+      <h3>Acknowledgment</h3>
+      <p>By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+    </section>
+  </article>
+</main>
+
+<footer role="contentinfo" aria-label="Footer with contact information">
+  <p><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</p>
+  <p><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></p>
+  <p>© 2024 Littleflower Gardening. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
