@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Littleflower Gardening</title>
+<style>
+  /* Import Google Fonts - Poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    /* Flower-themed pastel colors */
+    --color-pink-light: #ffc1cc;
+    --color-pink-medium: #ff6f91;
+    --color-pink-dark: #b33951;
+    --color-green-light: #daf7dc;
+    --color-green-medium: #6fcf97;
+    --color-green-dark: #2d6a4f;
+    --color-purple-light: #d6bcfa;
+    --color-purple-medium: #7b2ff7;
+    --color-purple-dark: #4b0082;
+    --color-gray-dark: #3b3b3b;
+    --color-gray-medium: #666666;
+    --color-gray-light: #f9f6f7;
+    --shadow-light: rgba(255, 111, 145, 0.2);
+    --shadow-dark: rgba(0,0,0,0.1);
+  }
+
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  a {
+    color: var(--color-pink-medium);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: var(--color-pink-dark);
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Header and Nav */
+  header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px var(--shadow-dark);
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-pink-dark);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-gray-medium);
+  }
+  .nav-links a {
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: var(--color-pink-light);
+    color: var(--color-pink-dark);
+  }
+  .nav-links a.active {
+    background: var(--color-pink-medium);
+    color: white;
+    cursor: default;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-green-light) 100%);
+    padding: 5rem 1rem 2rem;
+    border-radius: 0 0 60px 60px / 60px 60px 0 0;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    text-align: center;
+    color: var(--color-purple-dark);
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    text-shadow: 1px 1px 5px var(--color-pink-dark);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-weight: 600;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 3rem 1rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--color-purple-dark);
+    border-bottom: 3px solid var(--color-pink-medium);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-green-dark);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+    color: var(--color-gray-dark);
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    padding-left: 1.3rem;
+    list-style: disc;
+  }
+
+  /* Bottom section */
+  .bottom-section {
+    background: var(--color-pink-light);
+    border-radius: 1rem;
+    margin-top: 4rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    color: var(--color-pink-dark);
+  }
+  .bottom-section h3 {
+    color: var(--color-pink-dark);
+    margin-bottom: 1rem;
+  }
+  .bottom-section p {
+    font-weight: 500;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--color-purple-dark);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  footer p, footer a {
+    margin: 0.2rem 0;
+    color: #f0e6ff;
+  }
+  footer a:hover {
+    color: var(--color-pink-light);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    main {
+      padding: 2rem 1rem 4rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container" aria-label="Primary navigation">
+    <div class="logo" tabindex="0" aria-label="Littleflower Gardening logo">Littleflower Garden</div>
+    <div class="nav-links" role="navigation">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="privacy.html" class="active" tabindex="0" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Privacy Policy Page Hero">
+  <h1>Privacy Policy</h1>
+  <p>Your privacy is a garden we nurture with utmost care. This policy details how we collect, use, and protect your information at Littleflower Gardening.</p>
+</section>
+
+<main>
+  <article>
+
+    <section aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <p>Welcome to Littleflower Gardening’s Privacy Policy page. Just as we cultivate vibrant blooms with care, we also cherish and protect your personal information with great diligence. This policy outlines the types of information we collect, the reasons for collection, our methods of use, and the security measures we employ to keep your data safe and sound—much like a well-tended flowerbed protected from harsh weather.</p>
+      <p>By visiting our website, engaging with our gardening services, or communicating with us, you entrust us with your data. We commit to respecting your privacy and being transparent about our practices. If you have any questions or concerns regarding this policy, please don’t hesitate to reach out to us through the contact information provided at the page’s end.</p>
+      <p>Your trust grows with every seed we plant, and safeguarding your information is an essential part of our garden.</p>
+    </section>
+
+    <section aria-labelledby="information-we-collect-title">
+      <h2 id="information-we-collect-title">Information We Collect</h2>
+      <p>To provide you a seamless and blossoming gardening experience, we gather certain categories of information. Think of each data type as a unique flower species that helps complete the garden’s beauty and function:</p>
+      <ul>
+        <li><strong>Personal Identification Information:</strong> Including your name, email address, mailing address, phone number, and any other contact details you generously share with us. This information allows us to tailor our services and communicate effectively—like knowing the specific needs of each flower bed.</li>
+
+        <li><strong>Usage Data:</strong> When you browse our website or use our online portals, we collect data such as your IP address, browser type, pages visited, duration of visit, referring URLs, and clicks. This information helps us analyze trends and improve the user experience, akin to monitoring soil conditions to optimize growth.</li>
+
+        <li><strong>Cookies and Similar Tracking Technologies:</strong> We use cookies to remember your preferences, understand site usage, and customize your visits. These small data snippets work like garden markers—helping us keep track and organize for your benefit.</li>
+
+        <li><strong>Payment Information:</strong> If you purchase services or products from us, we collect the necessary payment and billing information. This sensitive data is securely handled through trusted third-party payment gateways, the equivalent of hiring expert gardeners for crucial tasks.</li>
+
+        <li><strong>Communications:</strong> Any messages, inquiries, or feedback you send us—including through contact forms or email—are collected to serve you better, nurture our relationship, and provide personalized support.</li>
+
+        <li><strong>Location Data:</strong> With your consent, we may collect approximate location data to personalize service delivery and recommend appropriate plants and care practices suited to your climate zone. Consider this the microclimate awareness of your garden’s environment.</li>
+      </ul>
+      <p>We make every effort not to gather information from children under 13 years of age. Should a parent or guardian believe their child has shared data with us, please contact us immediately; we will promptly address and remove such data to protect young buds from unintended exposure.</p>
+      <p>Rest assured, the data we collect only serves the purpose of cultivating a healthy, vibrant service tailored just for you.</p>
+    </section>
+
+    <section aria-labelledby="how-we-use-your-information-title">
+      <h2 id="how-we-use-your-information-title">How We Use Your Information</h2>
+      <p>Much like nurturing a garden requires careful tending, your information is used thoughtfully to enhance your experience and preserve trust. Our uses include:</p>
+      <ul>
+        <li>Providing and managing our gardening services and website functionalities, ensuring smooth operations like proper irrigation and sunlight for the plants.</li>
+
+        <li>Processing transactions, including service bookings, purchases, and billing, and sending related information such as confirmations or receipts—think of this as handling the essential nutrients of our business relationship.</li>
+
+        <li>Communicating updates, special offers, seasonal advice, and newsletters that keep your garden blooming year-round. You retain full control to opt-out whenever you wish.</li>
+
+        <li>Responding promptly to your queries, feedback, and customer service requests, cultivating a personal connection akin to a dedicated gardener’s care.</li>
+
+        <li>Analyzing site usage and behavior to understand patterns and continuously improve the experience, as a gardener would observe flower growth and soil health to enhance vitality.</li>
+
+        <li>Maintaining compliance with legal requirements and preventing fraudulent or malicious activities, ensuring a safe and trustworthy environment—just like protecting your garden from pests.</li>
+      </ul>
+      <p>In all uses, we keep your privacy and security paramount, treating your data as tenderly as a precious bloom in our care.</p>
+    </section>
+
+    <section aria-labelledby="information-sharing-and-disclosure-title">
+      <h2 id="information-sharing-and-disclosure-title">Information Sharing and Disclosure</h2>
+      <p>At Littleflower Gardening, your privacy is our sanctuary. We do not sell, rent, or trade your personal information to outsiders as a flower should not be uprooted without reason. However, there are limited scenarios in which your data may be shared:</p>
+      <ul>
+        <li><strong>Trusted Service Providers & Partners:</strong> We collaborate with select third-party companies that support our operations—such as payment processors, delivery services, IT hosts, and marketing platforms—that must adhere to strict confidentiality and security standards. These partners are part of our garden team, aiding to keep our shared garden thriving.</li>
+
+        <li><strong>Legal Obligations & Law Enforcement:</strong> We may disclose information when required by law, such as subpoenas, court orders, or government investigations. Compliance with such requests helps maintain fairness and legality, like ensuring gardens abide by community regulations.</li>
+
+        <li><strong>Business Transfers:</strong> If our business undergoes a merger, acquisition, or asset sale, customer data may be transferred as part of the transaction. We will notify you accordingly to keep transparency and trust blooming.</li>
+
+        <li><strong>Protecting Rights and Safety:</strong> To safeguard the rights, property, or safety of Littleflower Gardening, our users, or others, we may disclose personal information when reasonably necessary, similar to protecting a garden from threats or damage.</li>
+      </ul>
+      <p>We never share your data for purposes unrelated to our services without your explicit consent. Our commitment is to keep your information as secure and private as a garden hidden behind a protective hedge.</p>
+    </section>
+
+    <section aria-labelledby="cookies-and-tracking-title">
+      <h2 id="cookies-and-tracking-title">Cookies and Tracking Technologies</h2>
+      <p>To ensure your visits to our garden flourishes are smooth and personalized, we use cookies and similar technologies. In gardening terms, cookies are like gentle gardeners who remember your preferences and guide you throughout your path:</p>
+      <ul>
+        <li><strong>Remember Preferences:</strong> Keep track of your language selection, login sessions, and settings for a tailored experience every time you return.</li>
+        <li><strong>Enhance Features:</strong> Enable social media sharing buttons, chat support, and other handy tools to grow your engagement with our services.</li>
+        <li><strong>Site Analytics:</strong> Collect anonymous data about site traffic and user behavior so that we can prune inefficient pathways and plant new features where needed.</li>
+      </ul>
+      <p>You can manage your cookie settings through your browser. Disabling cookies may limit functionality and user experience, much like depriving a garden of nutrients. However, your choice is respected and honored.</p>
+      <p>Our cookie policy evolves with technology and best practices, and we keep you informed of significant changes on our website.</p>
+    </section>
+
+    <section aria-labelledby="data-security-title">
+      <h2 id="data-security-title">Data Security</h2>
+      <p>Much like the sturdy trellis that supports flourishing vines, our data security measures form a protective frame around your personal information. We employ multiple layers of defense to safeguard your data:</p>
+      <ul>
+        <li><strong>Encrypted Transmissions:</strong> Data sent between you and Littleflower Gardening is encrypted using Secure Socket Layer (SSL) technology to prevent unauthorized interception.</li>
+        <li><strong>Secure Storage:</strong> Personal information is stored on servers with robust physical and digital security controls to guard against breaches or loss.</li>
+        <li><strong>Access Control:</strong> Only authorized personnel with a strict need to know can access your data, and they are bound by confidentiality agreements to protect your privacy.</li>
+        <li><strong>Regular Audits & Monitoring:</strong> We routinely conduct audits and monitor our systems for vulnerabilities and unusual activities, much like scouting a garden for pests and diseases before they spread.</li>
+        <li><strong>Data Minimization:</strong> We limit personal information collection to only what is necessary for the intended purposes, reducing risks and keeping data manageable.</li>
+      </ul>
+      <p>Although we strive to create a garden fortified against every storm, no security system is foolproof. We advise all our visitors to use secure passwords and be cautious when sharing personal information. If you suspect any breach of your personal data through our site, please contact us immediately.</p>
+    </section>
+
+    <section aria-labelledby="data-retention-title">
+      <h2 id="data-retention-title">Data Retention</h2>
+      <p>Like seasonal planting cycles, we retain personal data only as long as necessary to fulfill the purposes outlined in this policy or to comply with legal obligations.</p>
+      <p>Specifically:</p>
+      <ul>
+        <li>Information related to completed transactions may be kept for up to seven years in accordance with tax and accounting requirements.</li>
+        <li>Marketing consent data is maintained until you withdraw your consent or opt out.</li>
+        <li>Non-active accounts and associated data may be deleted or anonymized after a period of inactivity of two years.</li>
+      </ul>
+      <p>When personal data reaches the end of its lifecycle, we securely delete or anonymize it to protect your privacy, ensuring no traces remain, like fallen leaves composted back into the earth.</p>
+    </section>
+
+    <section aria-labelledby="your-privacy-rights-title">
+      <h2 id="your-privacy-rights-title">Your Privacy Rights</h2>
+      <p>We believe your privacy is your garden to tend, and you have the following rights regarding the information we hold about you—rights analogous to caring for your own flowers:</p>
+      <ul>
+        <li><strong>Right to Access:</strong> You may request a copy of your personal information that we have collected to understand what data we hold.</li>
+        <li><strong>Right to Rectification:</strong> If you believe any information is inaccurate or incomplete, you can request corrections.</li>
+        <li><strong>Right to Erasure:</strong> You may ask for your personal data to be deleted, subject to certain legal exceptions.</li>
+        <li><strong>Right to Restrict Processing:</strong> You can limit how we use your data under specific circumstances.</li>
+        <li><strong>Right to Object:</strong> You may object to certain processing activities like direct marketing.</li>
+        <li><strong>Right to Data Portability:</strong> You can ask that your personal data be transferred to another service provider in a commonly used, machine-readable format.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, you can withdraw it at any time without affecting the lawfulness of prior processing.</li>
+      </ul>
+      <p>If you wish to exercise any of these rights, please contact us as indicated below. We will respond promptly and comply with applicable laws.</p>
+    </section>
+
+    <section aria-labelledby="children-privacy-title">
+      <h2 id="children-privacy-title">Children’s Privacy</h2>
+      <p>Our garden welcomes everyone, but children under the age of 13 do not serve as our direct clients or users, and we do not knowingly collect any personal information from them.</p>
+      <p>If a parent or guardian believes their child has provided personal data to us inadvertently, we encourage immediate contact so that we may delete such information quickly and preserve the child’s privacy and safety.</p>
+      <p>The protection of young buds is one of our cherished priorities.</p>
+    </section>
+
+    <section aria-labelledby="international-transfers-title">
+      <h2 id="international-transfers-title">International Data Transfers</h2>
+      <p>Littleflower Gardening is rooted in New York, but like the global exchange of seeds and horticultural knowledge, your data may be transferred and processed in countries outside your own.</p>
+      <p>We ensure that any international transfers of your personal information comply with relevant data protection laws and include appropriate safeguards and contractual protections to keep your data safe during its journey across borders.</p>
+      <p>This ensures your data blooms equally, no matter where it resides.</p>
+    </section>
+
+    <section aria-labelledby="third-party-services-title">
+      <h2 id="third-party-services-title">Third-Party Services and Integrations</h2>
+      <p>To cultivate a fuller garden of services, we partner with select third-party tools and platforms. These may include website analytics providers, payment processors, marketing platforms, and social media integrations.</p>
+      <p>We carefully vet these partners to ensure they maintain adequate privacy and security standards. However, visitors should be aware that these third parties have their own privacy policies, and we encourage reviewing those policies when engaging with their services through our site.</p>
+      <p>Examples include:</p>
+      <ul>
+        <li>Google Analytics for website traffic and user behavior insights.</li>
+        <li>Stripe or PayPal for secure payment processing.</li>
+        <li>Email marketing platforms like Mailchimp to send newsletters and updates.</li>
+      </ul>
+      <p>We do not share personal information with these partners unless required for your requested service or allowed by law.</p>
+    </section>
+
+    <section aria-labelledby="policy-changes-title">
+      <h2 id="policy-changes-title">Changes to This Privacy Policy</h2>
+      <p>Gardens flourish and evolve over time, and so too do our practices and legal obligations. We may update this Privacy Policy to reflect these changes.</p>
+      <p>When we make material updates, we will alert you by prominently posting a notice on our website or by sending you a notification email. We encourage you to review this page periodically to stay informed about how we protect your privacy and personal information.</p>
+      <p>Your continued use of our services after changes constitute acceptance of the updated policy.</p>
+    </section>
+
+    <section aria-labelledby="international-privacy-laws-title">
+      <h2 id="international-privacy-laws-title">International Privacy Laws Compliance</h2>
+      <p>Littleflower Gardening respects global standards for privacy protection, striving to meet regulations such as:</p>
+      <ul>
+        <li><strong>GDPR (General Data Protection Regulation):</strong> For users in the European Economic Area, we adhere to principles of data minimization, purpose limitation, and user rights like consent and data portability.</li>
+        <li><strong>CCPA (California Consumer Privacy Act):</strong> For residents of California, we provide rights to know, delete, and opt out of the sale of personal information.</li>
+        <li><strong>Other Jurisdictional Laws:</strong> We comply with local data privacy laws applicable to our users and operations worldwide, ensuring that your garden’s privacy is protected no matter where you flourish.</li>
+      </ul>
+      <p>If you are located in one of these regions and have questions about how we uphold your rights, please contact us as described below.</p>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions (FAQ)</h2>
+
+      <h3>How does Littleflower Gardening protect my information?</h3>
+      <p>We use encryption both for data in transit and at rest, train staff rigorously on data privacy, restrict access based on roles, and conduct regular security assessments — creating an environment as safe as a greenhouse for your personal data.</p>
+
+      <h3>Can I request deletion of my data?</h3>
+      <p>Yes, you may request that we delete your personal information subject to regulatory and business needs (such as retaining transaction records). We will promptly process such requests in accordance with the applicable laws.</p>
+
+      <h3>Do you share my data with marketers?</h3>
+      <p>We do not sell or rent your data to marketers or third parties. We may share your contact information with trusted partners solely to deliver services you requested, and never for unsolicited marketing without your consent.</p>
+
+      <h3>How can I opt out of marketing communications?</h3>
+      <p>Every marketing email we send includes an easy-to-use unsubscribe link. You can also contact us directly to update your preferences or stop receiving marketing emails.</p>
+
+      <h3>What cookies do you use?</h3>
+      <p>We use essential cookies required for website function, performance cookies for analytics, and functional cookies to enhance your experience. You can set your browser to reject or delete cookies, though this may limit site functionality.</p>
+
+      <h3>How long do you keep my data?</h3>
+      <p>We retain personal data only as long as necessary for the purposes described — typically between 1 to 7 years depending on data type and legal obligations.</p>
+    </section>
+
+    <section aria-labelledby="contact-us-title">
+      <h2 id="contact-us-title">Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us with the details below. We welcome the chance to cultivate trust and transparency in our relationship.</p>
+      <ul>
+        <li><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</li>
+        <li><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></li>
+        <li><strong>Email:</strong> <a href="mailto:privacy@littleflowergardening.com">privacy@littleflowergardening.com</a></li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer role="contentinfo" aria-label="Footer with contact information">
+  <p><strong>Address:</strong> 1 E 2nd St, New York, NY 10003, USA</p>
+  <p><strong>Phone:</strong> <a href="tel:+12125550123" aria-label="Call 1 212 555 0123">+1 (212) 555-0123</a></p>
+  <p>© 2024 Littleflower Gardening. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
